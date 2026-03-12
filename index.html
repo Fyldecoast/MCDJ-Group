@@ -9,47 +9,65 @@
   <!-- Google Fonts -->
  
  <style>
- /* 1. Force the container to stop being a 50/50 Grid */
-  .hero-content {
+  /* FORCE THE LAYOUT TO OPEN UP */
+.hero-content {
     display: flex !important;
     grid-template-columns: none !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center !important;
-    max-width: 1600px !important; 
-    width: 100% !important;
     gap: 80px !important;
-    margin: 0 auto !important;
-  }
+    max-width: 1500px !important;
+    width: 95% !important;
+}
 
-  /* 2. Force the Image side to take up 700px */
-  .hero-visual {
-    flex: 0 0 700px !important;
+.hero-visual, .hero-card, .hero-card-image {
     width: 700px !important;
     min-width: 700px !important;
-  }
+    flex: 0 0 700px !important;
+}
 
-  /* 3. Force the Card and Image to match */
-  .hero-card, .hero-card-image {
-    width: 700px !important;
-    height: 500px !important;
-  }
-
-  .hero-card-image img {
+.hero-card-image img {
     width: 100% !important;
-    height: 100% !important;
+    height: 550px !important;
     object-fit: cover !important;
     max-width: none !important;
+}
+  /* --- DESKTOP SCALE FIX (FOR LIVE SITE) --- */
+  @media (min-width: 1024px) {
+    /* 1. Give the container room to grow */
+    .hero-content {
+      max-width: 1450px !important;
+      width: 95% !important;
+      display: flex !important;
+      gap: 60px !important;
+    }
+
+    /* 2. Force the image container to be massive */
+    .hero-visual {
+      flex: 0 0 55% !important; 
+      display: block !important;
+    }
+
+    .hero-card {
+      width: 700px !important; /* This is the "Bigness" you saw on local */
+      max-width: 700px !important;
+      margin-left: auto !important;
+    }
+
+    .hero-card-image {
+      height: 550px !important; /* Forced height */
+      width: 100% !important;
+    }
+
+    .hero-card-image img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+    }
   }
 
-  /* 4. Fix for Mobile so it doesn't break */
-  @media (max-width: 1024px) {
-    .hero-content { flex-direction: column !important; gap: 30px !important; }
-    .hero-visual, .hero-card, .hero-card-image, .hero-card-image img {
-      width: 100% !important;
-      min-width: unset !important;
-      height: 300px !important;
-    }
+  /* --- MOBILE STAYING GOOD --- */
+  @media (max-width: 1023px) {
+    .hero-card-image { height: 280px !important; }
+    .hero-card { width: 100% !important; }
   }
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -100,18 +118,20 @@
       </div>
 
       <div class="hero-visual reveal reveal-delay-1 visible" style="flex: 0 0 700px !important; min-width: 700px !important; display: block !important;">
-        <div class="hero-card" style="width: 700px !important; max-width: 700px !important; background: #1a1a1a; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
-          <div class="hero-card-image" style="height: 550px !important; width: 700px !important; min-width: 700px !important;">
-            <img src="images/penthouse.jpg" alt="The Chatwal Hotel" style="width: 700px !important; min-width: 700px !important; height: 550px !important; object-fit: cover !important; display: block !important; max-width: none !important;">
-          </div>
-          <div class="hero-card-content" style="padding: 20px; color: white;">
-            <span style="color: #c5a059; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Featured Property</span>
-            <h3 style="margin-top: 5px; font-size: 1.5rem;">The Chatwal Hotel</h3>
-            <p style="opacity: 0.8; font-size: 0.9rem;">Blackpool, UK</p>
-          </div>
-        </div>
-      </div>
+  <div class="hero-card" style="width: 700px !important; max-width: 700px !important; background: rgba(26, 26, 26, 0.8); border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);">
+    
+    <div class="hero-card-image" style="height: 500px !important; width: 100% !important;">
+      <img src="images/penthouse.jpg" alt="The Chatwal Hotel" style="width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important; max-width: none !important;">
+    </div>
 
+    <div class="hero-card-content" style="padding: 24px; color: white;">
+      <span style="color: #c5a059; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; display: block; margin-bottom: 8px;">Featured Property</span>
+      <h3 style="margin: 0; font-size: 1.75rem; font-family: 'Cormorant Garamond', serif;">The Chatwal Hotel</h3>
+      <p style="opacity: 0.7; font-size: 1rem; margin-top: 4px;">Blackpool, UK</p>
+    </div>
+
+  </div>
+</div>
     </div>
   </section>
 
