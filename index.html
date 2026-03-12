@@ -9,38 +9,53 @@
   <!-- Google Fonts -->
  
  <style>
-  /* FORCE THE LAYOUT TO OPEN UP */
+ /* 1. Force the layout to open up and stay side-by-side */
 .hero-content {
-    display: flex !important;           /* Switches from Grid to Flex */
+    display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    justify-content: space-between !important;
-    max-width: 1500px !important;       /* Opens the container wider */
+    justify-content: center !important;
+    gap: 80px !important;
+    max-width: 1600px !important;
     width: 95% !important;
     margin: 0 auto !important;
-    gap: 60px !important;
 }
 
-.hero-text {
-    flex: 1 !important;                 /* Text takes the leftover space */
-}
-
-.hero-visual {
-    flex: 0 0 700px !important;         /* Forces exactly 700px width */
+/* 2. Force the Image side to be exactly 700px wide */
+.hero-visual, .hero-card {
     width: 700px !important;
     min-width: 700px !important;
+    flex: 0 0 700px !important;
 }
 
-.hero-card, .hero-card-image {
+/* 3. Force the Image to be tall and not 'squished' */
+.hero-card-image {
     width: 100% !important;
+    height: 550px !important;
+    overflow: hidden !important;
 }
 
 .hero-card-image img {
     width: 100% !important;
-    height: 500px !important;
-    object-fit: cover !important;
+    height: 100% !important;
+    object-fit: cover !important; /* This stops it from looking skinny */
+    display: block !important;
+    max-width: none !important;
 }
 
+/* 4. Fix for Mobile so it stacks vertically */
+@media (max-width: 1023px) {
+    .hero-content { 
+        flex-direction: column !important; 
+        gap: 40px !important;
+    }
+    .hero-visual, .hero-card { 
+        width: 100% !important; 
+        min-width: unset !important;
+        flex: 1 1 auto !important;
+    }
+    .hero-card-image { height: 300px !important; }
+}
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
