@@ -9,65 +9,47 @@
   <!-- Google Fonts -->
  
  <style>
-  /* FORCE THE LAYOUT TO OPEN UP */
-.hero-content {
+ /* 1. Force the container to stop being a 50/50 Grid */
+  .hero-content {
     display: flex !important;
     grid-template-columns: none !important;
-    gap: 80px !important;
-    max-width: 1500px !important;
-    width: 95% !important;
-}
-
-.hero-visual, .hero-card, .hero-card-image {
-    width: 700px !important;
-    min-width: 700px !important;
-    flex: 0 0 700px !important;
-}
-
-.hero-card-image img {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    max-width: 1600px !important; 
     width: 100% !important;
-    height: 550px !important;
-    object-fit: cover !important;
-    max-width: none !important;
-}
-  /* --- DESKTOP SCALE FIX (FOR LIVE SITE) --- */
-  @media (min-width: 1024px) {
-    /* 1. Give the container room to grow */
-    .hero-content {
-      max-width: 1450px !important;
-      width: 95% !important;
-      display: flex !important;
-      gap: 60px !important;
-    }
-
-    /* 2. Force the image container to be massive */
-    .hero-visual {
-      flex: 0 0 55% !important; 
-      display: block !important;
-    }
-
-    .hero-card {
-      width: 700px !important; /* This is the "Bigness" you saw on local */
-      max-width: 700px !important;
-      margin-left: auto !important;
-    }
-
-    .hero-card-image {
-      height: 550px !important; /* Forced height */
-      width: 100% !important;
-    }
-
-    .hero-card-image img {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: cover !important;
-    }
+    gap: 80px !important;
+    margin: 0 auto !important;
   }
 
-  /* --- MOBILE STAYING GOOD --- */
-  @media (max-width: 1023px) {
-    .hero-card-image { height: 280px !important; }
-    .hero-card { width: 100% !important; }
+  /* 2. Force the Image side to take up 700px */
+  .hero-visual {
+    flex: 0 0 700px !important;
+    width: 700px !important;
+    min-width: 700px !important;
+  }
+
+  /* 3. Force the Card and Image to match */
+  .hero-card, .hero-card-image {
+    width: 700px !important;
+    height: 500px !important;
+  }
+
+  .hero-card-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    max-width: none !important;
+  }
+
+  /* 4. Fix for Mobile so it doesn't break */
+  @media (max-width: 1024px) {
+    .hero-content { flex-direction: column !important; gap: 30px !important; }
+    .hero-visual, .hero-card, .hero-card-image, .hero-card-image img {
+      width: 100% !important;
+      min-width: unset !important;
+      height: 300px !important;
+    }
   }
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
