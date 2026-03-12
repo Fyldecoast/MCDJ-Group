@@ -11,64 +11,36 @@
  <style>
   /* FORCE THE LAYOUT TO OPEN UP */
 .hero-content {
-    display: flex !important;
-    grid-template-columns: none !important;
-    gap: 80px !important;
-    max-width: 1500px !important;
+    display: flex !important;           /* Switches from Grid to Flex */
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    max-width: 1500px !important;       /* Opens the container wider */
     width: 95% !important;
+    margin: 0 auto !important;
+    gap: 60px !important;
 }
 
-.hero-visual, .hero-card, .hero-card-image {
+.hero-text {
+    flex: 1 !important;                 /* Text takes the leftover space */
+}
+
+.hero-visual {
+    flex: 0 0 700px !important;         /* Forces exactly 700px width */
     width: 700px !important;
     min-width: 700px !important;
-    flex: 0 0 700px !important;
+}
+
+.hero-card, .hero-card-image {
+    width: 100% !important;
 }
 
 .hero-card-image img {
     width: 100% !important;
-    height: 550px !important;
+    height: 500px !important;
     object-fit: cover !important;
-    max-width: none !important;
 }
-  /* --- DESKTOP SCALE FIX (FOR LIVE SITE) --- */
-  @media (min-width: 1024px) {
-    /* 1. Give the container room to grow */
-    .hero-content {
-      max-width: 1450px !important;
-      width: 95% !important;
-      display: flex !important;
-      gap: 60px !important;
-    }
 
-    /* 2. Force the image container to be massive */
-    .hero-visual {
-      flex: 0 0 55% !important; 
-      display: block !important;
-    }
-
-    .hero-card {
-      width: 700px !important; /* This is the "Bigness" you saw on local */
-      max-width: 700px !important;
-      margin-left: auto !important;
-    }
-
-    .hero-card-image {
-      height: 550px !important; /* Forced height */
-      width: 100% !important;
-    }
-
-    .hero-card-image img {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: cover !important;
-    }
-  }
-
-  /* --- MOBILE STAYING GOOD --- */
-  @media (max-width: 1023px) {
-    .hero-card-image { height: 280px !important; }
-    .hero-card { width: 100% !important; }
-  }
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
