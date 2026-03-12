@@ -7,38 +7,31 @@
   <title>MCDJ Group | Boutique Stays & Property Partnerships</title>
   <link rel="stylesheet" href="style.css">
   <!-- Google Fonts -->
-   <style>
-  /* This block ONLY runs on Desktop (Screens wider than 1024px) */
+  <style>
+  /* --- DESKTOP SCALE FIX (FOR LIVE SITE) --- */
   @media (min-width: 1024px) {
-    /* 1. Make the container wider to allow the image to grow */
+    /* 1. Give the container room to grow */
     .hero-content {
-      max-width: 1400px !important;
+      max-width: 1450px !important;
+      width: 95% !important;
       display: flex !important;
-      flex-direction: row !important;
-      align-items: center !important;
       gap: 60px !important;
     }
 
-    /* 2. Shrink the text side slightly */
-    .hero-text {
-      flex: 0 0 40% !important;
-    }
-
-    /* 3. Make the image side much larger */
+    /* 2. Force the image container to be massive */
     .hero-visual {
-      flex: 0 0 55% !important;
+      flex: 0 0 55% !important; 
       display: block !important;
     }
 
-    /* 4. Force the Card and Image to the new big size */
     .hero-card {
-      width: 100% !important;
-      max-width: 700px !important; /* Huge width */
-      margin: 0 !important;
+      width: 700px !important; /* This is the "Bigness" you saw on local */
+      max-width: 700px !important;
+      margin-left: auto !important;
     }
 
     .hero-card-image {
-      height: 550px !important; /* Huge height */
+      height: 550px !important; /* Forced height */
       width: 100% !important;
     }
 
@@ -49,14 +42,10 @@
     }
   }
 
-  /* This ensures mobile stays exactly as it was by forcing the height back to normal on small screens */
+  /* --- MOBILE STAYING GOOD --- */
   @media (max-width: 1023px) {
-    .hero-card-image {
-      height: 300px !important;
-    }
-    .hero-card {
-      max-width: 450px !important;
-    }
+    .hero-card-image { height: 280px !important; }
+    .hero-card { width: 100% !important; }
   }
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
