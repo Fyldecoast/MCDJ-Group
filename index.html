@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MCDJ Group - Boutique Stays & Trusted Property Partnerships. Family-run property business specializing in short-term rentals and rent-to-rent partnerships.">
+  <title>MCDJ Group | Boutique Stays & Property Partnerships</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+   <style>
+  /* This block ONLY runs on Desktop (Screens wider than 1024px) */
+  @media (min-width: 1024px) {
+    /* 1. Make the container wider to allow the image to grow */
+    .hero-content {
+      max-width: 1400px !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 60px !important;
+    }
+
+    /* 2. Shrink the text side slightly */
+    .hero-text {
+      flex: 0 0 40% !important;
+    }
+
+    /* 3. Make the image side much larger */
+    .hero-visual {
+      flex: 0 0 55% !important;
+      display: block !important;
+    }
+
+    /* 4. Force the Card and Image to the new big size */
+    .hero-card {
+      width: 100% !important;
+      max-width: 700px !important; /* Huge width */
+      margin: 0 !important;
+    }
+
+    .hero-card-image {
+      height: 550px !important; /* Huge height */
+      width: 100% !important;
+    }
+
+    .hero-card-image img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+    }
+  }
+
+  /* This ensures mobile stays exactly as it was by forcing the height back to normal on small screens */
+  @media (max-width: 1023px) {
+    .hero-card-image {
+      height: 300px !important;
+    }
+    .hero-card {
+      max-width: 450px !important;
+    }
+  }
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">MCDJ Group</a>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#partnership" class="nav-link">Partnership</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-cta">Submit Your Property</a>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container hero-content desktop-wide">
+  <div class="hero-text reveal">
+    <h1 class="hero-title">Family Run Team.<br><span class="accent">Trusted Property Partnerships.</span></h1>
+    <p class="hero-subtitle">We’re a family run team at MCDJ Group, and we treat every property we manage like our own...</p>
+    <div class="hero-buttons">
+      <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+      <a href="#partnership" class="btn btn-secondary">Partner With Us</a>
+    </div>
+  </div>
+
+  <div class="hero-visual reveal reveal-delay-1">
+    <div class="hero-card">
+      <div class="hero-card-image">
+        <img src="images/penthouse.jpg" alt="Luxury Property">
+      </div>
+      <div class="hero-card-content">
+        <span class="hero-card-tag">Featured Property</span>
+        <h3>The Chatwal Hotel</h3>
+        <p>Blackpool, UK</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <!-- ============================================
+       TRUST STRIP
+       ============================================ -->
+  <section class="trust-strip">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item reveal">
+          <div class="trust-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h4>Family-Run Business</h4>
+          <p>Personal service & accountability</p>
+        </div>
+        <div class="trust-item reveal reveal-delay-1">
+          <div class="trust-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <h4>Short-Term Rental Focus</h4>
+          <p>Serviced accommodation experts</p>
+        </div>
+        <div class="trust-item reveal reveal-delay-2">
+          <div class="trust-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h4>Landlord Partnership Model</h4>
+          <p>Guaranteed rent & peace of mind</p>
+        </div>
+        <div class="trust-item reveal reveal-delay-3">
+          <div class="trust-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h4>Professionally Managed</h4>
+          <p>Quality standards guaranteed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ABOUT SECTION
+       ============================================ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content reveal">
+          <span class="section-tag">About Us</span>
+          <h2 class="section-title">A Family Business Built on <span class="accent">Trust & Quality</span></h2>
+          <p>We’re the Mkala family. Between the four of us, we’ve combined our backgrounds in hospitality and operations to build a property business that actually listens.</p>
+          <p>We look after short term rentals and serviced stays. The way we work is simple: we lease your property long-term, becoming your single, reliable tenant. From there, we handle the guests, the cleaning, and the maintenance all while making sure your rent is paid on time, every time.</p>
+          <p>Coming from a boutique hotel background, we know that the small details matter. We don't just 'manage' a house; we keep it in showroom condition. For us, it’s about building a reputation for reliability so you never have to worry about the state of your investment.</p>
+        </div>
+        <div class="about-visual reveal reveal-delay-1">
+          <div class="about-card glass-card">
+            <h3>Our Mission</h3>
+            <p>To give property owners total peace of mind. We take the stress out of being a landlord by providing guaranteed rent and keeping every home in showroom condition, so you can enjoy the rewards of your investment without the daily headaches.</p>
+          </div>
+          <div class="about-card glass-card">
+            <h3>Our Vision</h3>
+            <p>Our goal is to be the most reliable name in local property management. As a family, we’re committed to growing a business built on long-term relationships, high standards, and the simple promise that when we look after a property, we look after it for life.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PORTFOLIO SECTION
+       ============================================ -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Our Portfolio</span>
+        <h2 class="section-title">Properties We <span class="accent">Manage</span></h2>
+        <p class="section-subtitle">We don't just fill rooms; we look after homes. Below are the properties we currently manage, where quality and care are the daily standard.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- ==========================================
+             PROPERTY CARD 1 - The Chatwal Hotel
+             Duplicate this card to add another property
+             ========================================== -->
+        <article class="property-card reveal">
+          <div class="property-image">
+            <!-- Replace src with your property image -->
+            <img src="images/room2.jpg" alt="The Chatwal Hotel">
+            <div class="property-tags">
+              <span class="tag">Boutique Stay</span>
+              <span class="tag">Spa facilities</span>
+            </div>
+          </div>
+          <div class="property-content">
+            <h3 class="property-title">The Chatwal Hotel</h3>
+            <p class="property-location">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Blackpool, UK
+            </p>
+            <p class="property-description">Classic charm, modern comfort. A thoughtfully designed space for guests who want a quieter, more polished side of Blackpool.</p>
+            <a href="https://www.thechatwalblackpool.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View Property</a>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PROPERTY CARD 2 - The Ascot Hotel
+             Duplicate this card to add another property
+             ========================================== -->
+        <article class="property-card reveal reveal-delay-1">
+          <div class="property-image">
+            <!-- Replace src with your property image -->
+           <img src="images/ascot7.jpg" alt="The Ascot Hotel">
+            <div class="property-tags">
+             <span class="tag">Modern Coastal Stay</span>
+              <span class="tag">Family Comfort</span>
+            </div>
+          </div>
+          <div class="property-content">
+            <h3 class="property-title">The Ascot Hotel</h3>
+            <p class="property-location">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Blackpool, UK
+            </p>
+            <p class="property-description">Space to relax and rooms built for families. The Ascot combines high standards with a friendly, down-to-earth atmosphere. Whether you're here for the weekend or a longer stay, we make sure your family has everything they need to feel at home.</p>
+            <a href="https://www.theascothotelblackpool.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View Property</a>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             ADD MORE PROPERTY CARDS HERE
+             Copy one of the cards above and update:
+             - Image src
+             - Property name
+             - Location
+             - Tags
+             - Description
+             - Link href
+             ========================================== -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       HOW RENT-TO-RENT WORKS
+       ============================================ -->
+  <section class="process" id="how-it-works">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">The Process</span>
+        <h2 class="section-title">How <span class="accent">Rent-to-Rent</span> Works</h2>
+        <p class="section-subtitle">A simple, transparent partnership model designed to benefit property owners with guaranteed income and professional management.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step reveal">
+          <div class="step-number">01</div>
+          <div class="step-content glass-card">
+            <h3>Property Review</h3>
+            <p>We assess your property to ensure it meets our quality standards and is suitable for short-term rentals or serviced accommodation.</p>
+          </div>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+          <div class="step-number">02</div>
+          <div class="step-content glass-card">
+            <h3>Agreement & Setup</h3>
+            <p>We establish a clear rent-to-rent agreement with guaranteed monthly payments and transparent terms for both parties.</p>
+          </div>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="step-number">03</div>
+          <div class="step-content glass-card">
+            <h3>Styling & Preparation</h3>
+            <p>Our team prepares the property to guest-ready standards, including furnishing, decoration, and professional photography.</p>
+          </div>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="step-number">04</div>
+          <div class="step-content glass-card">
+            <h3>Listing & Operations</h3>
+            <p>We list your property on major platforms like Airbnb and Booking.com, handling all bookings, guest communication, and check-ins.</p>
+          </div>
+        </div>
+        <div class="process-step reveal reveal-delay-4">
+          <div class="step-number">05</div>
+          <div class="step-content glass-card">
+            <h3>Ongoing Management</h3>
+            <p>We provide continuous property management including cleaning, maintenance, inspections, and regular landlord updates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHY WORK WITH US
+       ============================================ -->
+  <section class="benefits">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Benefits</span>
+        <h2 class="section-title">Why Property Owners <span class="accent">Choose Us</span></h2>
+        <p class="section-subtitle">We handle everything so you can enjoy reliable rental income without the usual landlord headaches.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card glass-card reveal">
+          <div class="benefit-icon">
+           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 7c0-5.333-8-5.333-8 0"></path>
+              <path d="M10 7v12"></path>
+             <path d="M6 21h12"></path>
+          <path d="M6 13h10"></path>
+        </svg>
+          </div>
+          <h3>Guaranteed Monthly Rent</h3>
+          <p>Receive consistent rental payments every month, regardless of occupancy levels or seasonal fluctuations.</p>
+        </div>
+        <div class="benefit-card glass-card reveal reveal-delay-1">
+          <div class="benefit-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <path d="M9 15l2 2 4-4"></path>
+            </svg>
+          </div>
+          <h3>Professional Cleaning</h3>
+          <p>Our dedicated cleaning team ensures your property is immaculate after every guest stay.</p>
+        </div>
+        <div class="benefit-card glass-card reveal reveal-delay-2">
+          <div class="benefit-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3>Hands-Off Management</h3>
+          <p>No more tenant calls, maintenance hassles, or booking management. We handle it all.</p>
+        </div>
+        <div class="benefit-card glass-card reveal reveal-delay-3">
+          <div class="benefit-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </div>
+          <h3>Regular Inspections</h3>
+          <p>We conduct routine property inspections to ensure standards are maintained and issues are caught early.</p>
+        </div>
+        <div class="benefit-card glass-card reveal reveal-delay-4">
+          <div class="benefit-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h3>Long-Term Agreements</h3>
+          <p>Secure, long-term partnerships that provide stability for both parties.</p>
+        </div>
+        <div class="benefit-card glass-card reveal reveal-delay-5">
+          <div class="benefit-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <h3>Reliable Communication</h3>
+          <p>Stay informed with regular updates and have direct access to our management team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PARTNERSHIP SECTION
+       ============================================ -->
+  <section class="partnership" id="partnership">
+    <div class="container">
+      <div class="partnership-grid">
+        <div class="partnership-content reveal">
+          <span class="section-tag">For Property Owners</span>
+          <h2 class="section-title">A Simpler Way To <span class="accent">LET Your Property.</span></h2>
+          <p>We work with property owners who are tired of the usual landlord headaches. Instead of chasing tenants and managing repairs, you get a single, guaranteed payment from us every month while we take care of everything else.</p>
+          
+          <div class="partnership-details">
+            <div class="partnership-item">
+              <h4>Who We Work With</h4>
+              <p>From private landlords to estate agents, we partner with people who want to step back from the daily grind of property management. We’re here for those who value consistency, clear communication, and a well maintained building.</p>
+            </div>
+            <div class="partnership-item">
+              <h4>Property Types</h4>
+              <p>From city apartments and family houses to larger HMOs and hotels we look for quality spaces that we can turn into exceptional stays.</p>
+            </div>
+            <div class="partnership-item">
+              <h4>Areas We Operate</h4>
+              <p>Currently focused on Blackpool, Manchester, Liverpool, and surrounding areas in the North West.</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+        </div>
+        <div class="partnership-visual reveal reveal-delay-1">
+          <div class="partnership-card glass-card">
+            <h3>Simple Onboarding</h3>
+            <ol class="onboarding-steps">
+              <li>Initial property discussion</li>
+              <li>Property viewing and assessment</li>
+              <li>Agreement and terms finalised</li>
+              <li>Property preparation and styling</li>
+              <li>Go live and start earning</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FAQ SECTION
+       ============================================ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked <span class="accent">Questions</span></h2>
+        <p class="section-subtitle">Find answers to common questions about our rent-to-rent model and property partnerships.</p>
+      </div>
+
+      <div class="faq-list reveal">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is rent-to-rent?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>We become your tenant. We sign a long-term lease with you, paying you a guaranteed monthly rent regardless of whether the property is full or empty. We then look after the guests and the day-to-day management, so you can enjoy a truly passive income.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How do we look after your property?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>We treat every home in our care as if it were our own. Because our business relies on five-star reviews, it is in our best interest to keep your property in showroom condition. From strict guest vetting to professional cleaning after every stay, we don't just "manage" your home we protect it.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Who handles the bills?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>We do. To make things as simple as possible for you, we take over the responsibility for all utilities including gas, electricity, water, and high speed WiFi. You receive your rent as a clear, fixed amount every month with no surprise costs or admin to worry about.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How long is the agreement?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>We generally look for a term of 3 to 5 years, as this gives both of us the most stability. However, we’re family-run and flexible, we’ll sit down with you to find a timeframe that fits your long-term plans and your property’s needs.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What if something gets damaged?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>We’re in your property multiple times a week, so we catch the small things before they become big problems. We handle all minor repairs and general wear and tear ourselves as part of our service. For anything larger, we’re fully insured and will keep you in the loop every step of the way. Our goal is to return your property to you in better condition than we found it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT SECTION
+       ============================================ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let’s Talk About Your <span class="accent"> Property.</span></h2>
+          <p>Whether you’re looking for a tenant you can finally rely on, or you’re just curious about how we can simplify your life as a landlord, we’d love to chat. No pressure, just a friendly conversation to see if we’re a good fit for your property.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <!-- Update email address here -->
+              <a href="mailto:mcdjgroup@gmail.com">mcdjgroup@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <!-- Update phone number here -->
+              <a href="tel:07940129468">07940 129 468</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper reveal reveal-delay-1">
+          <!-- 
+            FORM HANDLING NOTE:
+            This form is currently static UI only.
+            To enable form submissions, you can:
+            1. Add Formspree: change action to "https://formspree.io/f/YOUR_FORM_ID"
+            2. Add Netlify Forms: add netlify attribute to form tag
+            3. Connect to your own backend endpoint
+          -->
+          <form class="contact-form glass-card" action="https://formspree.io/f/mreykewo" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="07XXX XXXXXX">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="location">Property Location</label>
+                <input type="text" id="location" name="location" placeholder="City or area">
+              </div>
+              <div class="form-group">
+                <label for="property-type">Property Type</label>
+                <select id="property-type" name="property-type">
+                  <option value="">Select type</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="house">House</option>
+                  <option value="hmo">HMO</option>
+                  <option value="hotel">Hotel</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="bedrooms">Number of Bedrooms</label>
+              <select id="bedrooms" name="bedrooms">
+                <option value="">Select</option>
+                <option value="1">1 Bedroom</option>
+                <option value="2">2 Bedrooms</option>
+                <option value="3">3 Bedrooms</option>
+                <option value="4">4 Bedrooms</option>
+                <option value="5+">5+ Bedrooms</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your property or enquiry..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="footer-logo">MCDJ Group</h3>
+          <p>A family-run property business specialising in boutique stays and trusted landlord partnerships.</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#partnership">Partnership</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:mcdjgroup@gmail.com">mcdjgroup@gmail.com</a></li>
+            <li><a href="tel:07940129468">07940 129 468</a></li>
+          </ul>
+        </div>
+        <div class="footer-legal">
+          <h4>Legal</h4>
+          <ul>
+            <!-- Update these links when pages are created -->
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MCDJ Group. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
