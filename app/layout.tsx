@@ -9,7 +9,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'v0 App',
   description: 'Created with v0',
-  generator: 'v0.app',
+  generator: 'MCDJ Group',
   icons: {
     icon: [
       {
@@ -42,4 +42,5 @@ export default function RootLayout({
       </body>
     </html>
   )
+  
 }
