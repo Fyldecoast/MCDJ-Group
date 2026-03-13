@@ -37,9 +37,10 @@
 
 .hero-card-image img {
     width: 100% !important;
-    height: 600px !important; /* Forces the height */
-    object-fit: cover !important; /* Crops the sides instead of squishing the middle */
-
+    height: 100% !important;
+    object-fit: cover !important; /* This stops it from looking skinny */
+    display: block !important;
+    max-width: none !important;
 }
 
 /* 4. Fix for Mobile so it stacks vertically */
@@ -93,14 +94,23 @@
  <section class="hero" id="home" style="background: #0a0a0a; padding: 100px 0; overflow: hidden;">
     <div class="container" style="max-width: 1400px; margin: 0 auto; display: flex !important; flex-direction: row; align-items: center; gap: 60px; justify-content: space-between;">
       
-      <div class="hero-text" style="flex: 1; min-width: 400px;">
-        <h1 class="hero-title" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px;">Family Run Team.<br><span class="accent" style="color: #c5a059;">Trusted Property Partnerships.</span></h1>
-        <p class="hero-subtitle" style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 32px; max-width: 500px;">We’re a family run team at MCDJ Group, and we treat every property we manage like our own. We partner with owners through simple rent-to-rent agreements, taking the stress of short term rentals off your plate while making sure you never miss a monthly payment.</p>
-        <div class="hero-buttons" style="display: flex; gap: 20px;">
-          <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
-          <a href="#partnership" class="btn btn-secondary">Partner With Us</a>
-        </div>
-      </div>
+      <div class="hero-text" style="flex: 0.8; min-width: 450px;">
+  <h1 class="hero-title" style="font-size: 4.5rem; line-height: 1.1; margin-bottom: 24px; font-weight: 800;">
+    Family Run Team.<br>
+    <span class="accent" style="color: #c5a059;">Trusted Property Partnerships.</span>
+  </h1>
+  
+  <p class="hero-subtitle" style="font-size: 1.5rem; line-height: 1.6; opacity: 0.9; margin-bottom: 40px; max-width: 600px;">
+    We’re a family run team at MCDJ Group, and we treat every property we manage like our own. 
+    We partner with owners through simple rent-to-rent agreements, taking the stress of short term 
+    rentals off your plate while making sure you never miss a monthly payment.
+  </p>
+  
+  <div class="hero-buttons" style="display: flex; gap: 24px;">
+    <a href="#portfolio" class="btn btn-primary" style="padding: 16px 32px; font-size: 1.2rem;">View Portfolio</a>
+    <a href="#partnership" class="btn btn-secondary" style="padding: 16px 32px; font-size: 1.2rem;">Partner With Us</a>
+  </div>
+</div>
 
       <div class="hero-visual" style="flex: 0 0 700px !important; width: 700px !important; min-width: 700px !important;">
         <div class="hero-card" style="background: #1a1a1a; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
