@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MCDJ Group - Boutique Stays & Trusted Property Partnerships. Family-run property business specializing in short-term rentals and rent-to-rent partnerships.">
-  <title>MCDJ Group | Boutique Stays & Property Partnerships</title>
+  
+  <title>MCDJ Group | Premium Short-Term Rental Management Manchester</title>
+  <meta name="description" content="MCDJ Group: Premium short-term rental management in Manchester & the North West. We specialise in boutique stays and high-yield property partnerships across the region.">
+  <link rel="canonical" href="https://yourdomain.com/" />
+
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="images/logo1.png">
   <!-- Google Fonts -->
@@ -66,28 +69,40 @@
   <!-- ============================================
        NAVIGATION
        ============================================ -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">MCDJ Group</a>
+<nav class="navbar" id="navbar" style="
+  position: fixed; /* CHANGED FROM ABSOLUTE */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 1) !important; 
+  padding: 5px 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Slightly lighter border so you can see it scroll */
+  transition: all 0.3s ease;
+">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo" style="display: flex; align-items: center;">
+      <img src="images/logo3.png" alt="MCDJ Group Logo" style="height: 60px; width: auto; object-fit: contain;">
+    </a>
       
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-        <li><a href="#partnership" class="nav-link">Partnership</a></li>
-        <li><a href="#faq" class="nav-link">FAQ</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      <li><a href="#partnership" class="nav-link">Partnership</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
 
-      <a href="#contact" class="nav-cta">Submit Your Property</a>
-    </div>
-  </nav>
+    <a href="#contact" class="nav-cta">Submit Your Property</a>
+  </div>
+</nav>
 
   <!-- ============================================
        HERO SECTION
@@ -102,9 +117,8 @@
   </h1>
   
   <p class="hero-subtitle" style="font-size: 1.2rem; line-height: 1.5; opacity: 0.9; margin-bottom: 30px; max-width: 550px;">
-    We’re a family run team at MCDJ Group, and we treat every property we manage like our own. 
-    We partner with owners through simple rent-to-rent agreements, taking the stress of short term 
-    rentals off your plate while making sure you never miss a monthly payment.
+   A family-run property business specialising in boutique stays and trusted landlord partnerships.
+   Currently operating boutique hospitality properties across Manchester and the North West.
   </p>
 </div>
 
@@ -117,6 +131,7 @@
             <span style="color: #c5a059; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700;">Featured Property</span>
             <h3 style="margin: 10px 0 5px 0; font-size: 1.8rem; color: white;">The Chatwal Hotel</h3>
             <p style="color: rgba(255,255,255,0.6); margin: 0;">Blackpool, UK</p>
+            
           </div>
         </div>
       </div>
@@ -184,9 +199,9 @@
         <div class="about-content reveal">
           <span class="section-tag">About Us</span>
           <h2 class="section-title">A Family Business Built on <span class="accent">Trust & Quality</span></h2>
-          <p>We’re the Mkala family. Between the four of us, we’ve combined our backgrounds in hospitality and operations to build a property business that actually listens.</p>
-          <p>We look after short term rentals and serviced stays. The way we work is simple: we lease your property long-term, becoming your single, reliable tenant. From there, we handle the guests, the cleaning, and the maintenance all while making sure your rent is paid on time, every time.</p>
-          <p>Coming from a boutique hotel background, we know that the small details matter. We don't just 'manage' a house; we keep it in showroom condition. For us, it’s about building a reputation for reliability so you never have to worry about the state of your investment.</p>
+          <p>We're the Mkala family. With a background in boutique hotels, we know the small
+          details matter. We don't just 'manage' a house; we keep it in showroom condition to
+          give property owners total peace of mind.</p>
         </div>
         <div class="about-visual reveal reveal-delay-1">
           <div class="about-card glass-card">
@@ -279,9 +294,30 @@
              - Link href
              ========================================== -->
       </div>
+
     </div>
   </section>
+<div style="width: 100%; background: #0a0a0a; padding: 60px 20px; border-top: 1px solid rgba(197, 160, 89, 0.2); border-bottom: 1px solid rgba(197, 160, 89, 0.2); position: relative; z-index: 10;">
+  <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; text-align: center;">
+    
+    <div style="flex: 1; min-width: 250px;">
+      <h2 style="color: #c5a059; font-size: 2.8rem; margin-bottom: 5px; font-family: serif; font-weight: 700;">4.8/5</h2>
+      <p style="color: #ffffff; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 700;">Average Guest Rating</p>
+    </div>
 
+    <div style="flex: 1; min-width: 250px;">
+      <h2 style="color: #c5a059; font-size: 2.8rem; margin-bottom: 5px; font-family: serif; font-weight: 700;">100%</h2>
+      <p style="color: #ffffff; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 700;">On-Time Rent Payments</p>
+    </div>
+
+    <div style="flex: 1; min-width: 250px;">
+      <h2 style="color: #c5a059; font-size: 2.8rem; margin-bottom: 5px; font-family: serif; font-weight: 700;">Expert</h2>
+      <p style="color: #ffffff; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 700;">Serviced Accommodation</p>
+    </div>
+
+  </div>
+</div>
+</div>
   <!-- ============================================
        HOW RENT-TO-RENT WORKS
        ============================================ -->
@@ -298,7 +334,7 @@
           <div class="step-number">01</div>
           <div class="step-content glass-card">
             <h3>Property Review</h3>
-            <p>We assess your property to ensure it meets our quality standards and is suitable for short-term rentals or serviced accommodation.</p>
+            <p>Our team prepares the property to guest-ready standards, including furnishing, decoration, and professional photography.</p>
           </div>
         </div>
         <div class="process-step reveal reveal-delay-1">
@@ -312,7 +348,7 @@
           <div class="step-number">03</div>
           <div class="step-content glass-card">
             <h3>Styling & Preparation</h3>
-            <p>Our team prepares the property to guest-ready standards, including furnishing, decoration, and professional photography.</p>
+            <p>Our team prepares the property to guest-ready standards, including furnishing, decoration, and <strong>professional photography.</strong></p>
           </div>
         </div>
         <div class="process-step reveal reveal-delay-3">
@@ -535,9 +571,26 @@
             </svg>
           </button>
           <div class="faq-answer">
-            <p>We’re in your property multiple times a week, so we catch the small things before they become big problems. We handle all minor repairs and general wear and tear ourselves as part of our service. For anything larger, we’re fully insured and will keep you in the loop every step of the way. Our goal is to return your property to you in better condition than we found it.</p>
+            <p>We’re in your property multiple times a week, so we catch the small things before they become big problems. We handle all minor repairs and general wear and tear ourselves as part of our service. 
+              For anything larger, we’re fully insured and will keep you in the loop every step of the way. Our goal is to return your property to you in better condition than we found it.</p>
           </div>
         </div>
+
+         <!-- FAQ Item 6 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Is rent-to-rent legal?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, absolutely. We use professionally drafted,
+             solicitor-approved corporate lease agreements that are fully compliant with UK property law to protect both the landlord and ourselves.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

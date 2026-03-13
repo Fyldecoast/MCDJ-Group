@@ -214,4 +214,52 @@
         object-fit: cover !important; /* Prevents squishing */
     }
   }
+  nav {
+    background-color: #ffffff !important; /* Forces a white background */
+    border-bottom: 1px solid #e5e5e5;    /* Adds a subtle line below it */
+    padding: 10px 0;                    /* Gives the logo breathing room */
+}
+
+
+
+/* This ensures the links in your nav are still visible on white */
+.nav-links a {
+    color: #1a1a1a !important; 
+}
+nav {
+  background-color: #ffffff !important; 
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+}
+
+/* Make sure your menu links (Home, Properties, etc.) are dark so they show up on the white background */
+.nav-links a, .nav-menu a {
+  color: #001f3f !important; /* A nice navy to match your logo */
+  font-weight: 600;
+}
+.navbar {
+    font-family: 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+/* Syncing Audit Changes */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Protects section titles from the fixed Nav */
+}
+
+/* Force Visibility for new Trust/Stats sections */
+#trust-bar, .trust-strip, .trust-item {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+/* Ensure the fixed Nav Bar doesn't turn transparent on scroll */
+.navbar {
+    background: #0a0a0a !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
 }
