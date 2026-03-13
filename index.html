@@ -48,7 +48,30 @@
 }
 
 /* 4. Fix for Mobile so it stacks vertically */
+/* 4. Fix for Mobile so it stacks vertically and shows the image */
 @media (max-width: 1023px) {
+    .hero-content { 
+        flex-direction: column !important; 
+        gap: 20px !important;
+        display: block !important; /* Forces stacking */
+    }
+    .hero-visual, .hero-card { 
+        width: 100% !important; 
+        min-width: unset !important;
+        flex: 1 1 auto !important;
+        display: block !important; /* Ensures container is visible */
+    }
+    .hero-card-image { 
+        height: 350px !important; /* Gives the image a fixed height on mobile */
+        width: 100% !important;
+        display: block !important;
+    }
+    .hero-card-image img {
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+}
+
     .hero-content { 
         flex-direction: column !important; 
         gap: 40px !important;
@@ -59,7 +82,7 @@
         flex: 1 1 auto !important;
     }
     .hero-card-image { height: 300px !important; }
-}
+
 </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,41 +127,111 @@
   </div>
 </nav>
 
-  <!-- ============================================
-       HERO SECTION
-       ============================================ -->
- <section class="hero" id="home" style="background: #0a0a0a; padding: 100px 0; overflow: hidden;">
-    <div class="container" style="max-width: 1400px; margin: 0 auto; display: flex !important; flex-direction: row; align-items: center; gap: 60px; justify-content: space-between;">
-      
- <div class="hero-text" style="flex: 1; min-width: 400px;">
-  <h1 class="hero-title" style="font-size: 3.2rem; line-height: 1.2; margin-bottom: 20px; font-weight: 800;">
-    Family Run Team.<br>
-    <span class="accent" style="color: #c5a059;">Trusted Property Partnerships.</span>
-  </h1>
-  
-  <p class="hero-subtitle" style="font-size: 1.2rem; line-height: 1.5; opacity: 0.9; margin-bottom: 30px; max-width: 550px;">
-   A family-run property business specialising in boutique stays and trusted landlord partnerships.
-   Currently operating boutique hospitality properties across Manchester and the North West.
-  </p>
-</div>
-
-      <div class="hero-visual" style="flex: 0 0 700px !important; width: 700px !important; min-width: 700px !important;">
-        <div class="hero-card" style="background: #1a1a1a; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
-          <div class="hero-card-image" style="height: 500px; width: 100%;">
-            <img src="images/penthouse.jpg" alt="The Chatwal Hotel" style="width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important;">
-          </div>
-          <div class="hero-card-content" style="padding: 30px; background: #1a1a1a;">
-            <span style="color: #c5a059; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700;">Featured Property</span>
-            <h3 style="margin: 10px 0 5px 0; font-size: 1.8rem; color: white;">The Chatwal Hotel</h3>
-            <p style="color: rgba(255,255,255,0.6); margin: 0;">Blackpool, UK</p>
-            
-          </div>
+ <section class="hero" id="home" style="background: #0a0a0a; padding: 100px 0; overflow: hidden; display: flex; align-items: center; min-height: 70vh;">
+    <div class="hero-container">
+        
+        <div class="hero-text-box">
+            <h1 class="hero-main-title">
+                Family Run Team.<br>
+                <span style="color: #c5a059;">Trusted Property Partnerships.</span>
+            </h1>
+            <p class="hero-description">
+                A family-run property business specialising in boutique stays and trusted landlord partnerships.
+                Currently operating boutique hospitality properties across Manchester and the North West.
+            </p>
         </div>
-      </div>
+
+        <div class="hero-image-box">
+            <div class="property-card-hero">
+                <div class="property-image-wrap">
+                    <img src="images/penthouse.jpg" alt="Featured Property">
+                </div>
+                <div class="property-info-wrap">
+                    <span class="gold-tag">Featured Property</span>
+                    <h3>The Chatwal Hotel</h3>
+                    <p>Blackpool, UK</p>
+                </div>
+            </div>
+        </div>
 
     </div>
-  </section>
+</section>
 
+<style>
+    /* DESKTOP LAYOUT */
+    .hero-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
+        width: 100%;
+    }
+
+    .hero-text-box { flex: 1; }
+    
+    .hero-main-title {
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        color: rgba(255,255,255,0.8);
+        line-height: 1.6;
+        max-width: 500px;
+    }
+
+    .hero-image-box { flex: 0 0 620px; }
+
+    .property-card-hero {
+        background: #1a1a1a;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    }
+
+    .property-image-wrap { height: 400px; width: 100%; }
+    .property-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .property-info-wrap { padding: 25px; }
+    .gold-tag { color: #c5a059; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; font-size: 0.75rem; }
+    .property-info-wrap h3 { color: white; font-size: 1.7rem; margin: 8px 0 4px 0; }
+    .property-info-wrap p { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+
+    /* MOBILE SETTINGS - These trigger for Dev Mode/Phones */
+    @media (max-width: 768px) {
+        .hero-container {
+            flex-direction: column !important;
+            text-align: center !important;
+            padding-top: 40px !important;
+            gap: 30px !important;
+        }
+        .hero-text-box {
+            width: 100% !important;
+        }
+        .hero-main-title {
+            font-size: 1.8rem !important; /* Smaller text for mobile */
+        }
+        .hero-description {
+            font-size: 0.95rem !important;
+            margin: 0 auto 20px auto !important;
+        }
+        .hero-image-box {
+            flex: 0 0 auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+        .property-image-wrap {
+            height: 280px !important; /* Shorter for mobile */
+        }
+    }
+</style>
   <!-- ============================================
        TRUST STRIP
        ============================================ -->
@@ -321,7 +414,7 @@
   <!-- ============================================
        HOW RENT-TO-RENT WORKS
        ============================================ -->
-  <section class="process" id="how-it-works">
+</div> </div> <section class="process" id="how-it-works">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">The Process</span>
@@ -347,7 +440,7 @@
         <div class="process-step reveal reveal-delay-2">
           <div class="step-number">03</div>
           <div class="step-content glass-card">
-            <li>Property preparation, styling, and professional photography</li>
+            <h3>Property preparation, styling, and professional photography </h3>
             <p>Our team prepares the property to guest-ready standards, including furnishing, decoration, and <strong>professional photography.</strong></p>
           </div>
         </div>
@@ -478,17 +571,18 @@
           <a href="#contact" class="btn btn-primary">Book a Consultation</a>
         </div>
         <div class="partnership-visual reveal reveal-delay-1">
-          <div class="partnership-card glass-card">
-            <h3>Simple Onboarding</h3>
-            <ol class="onboarding-steps">
-              <li>Initial property discussion</li>
-              <li>Property viewing and assessment</li>
-              <li>Agreement and terms finalised</li>
-              <li>Property preparation, styling, and professional photography</li>
-              <li>Go live and start earning</li>
-            </ol>
-          </div>
-        </div>
+  <div class="partnership-card glass-card">
+    <h3>Simple Onboarding</h3>
+    <div class="onboarding-steps" style="padding-top: 15px;">
+      <p style="margin-bottom: 10px;">1. Initial property discussion</p>
+      <p style="margin-bottom: 10px;">2. Property viewing and assessment</p>
+      <p style="margin-bottom: 10px;">3. Agreement and terms finalised</p>
+      <p style="margin-bottom: 10px;">4. Property preparation, styling, and professional photography</p>
+      <p style="margin-bottom: 10px;">5. Go live and start earning</p>
+    </div>
+  </div>
+</div>
+      </div> </div> </section>
       </div>
     </div>
   </section>

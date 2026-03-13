@@ -300,114 +300,110 @@ input, textarea, select {
 }
 
 /* ============================================
-   HERO SECTION
+   HERO SECTION - BOLD & TALL PORTRAIT
    ============================================ */
 .hero {
   position: relative;
-  min-height: 100vh;
+  background: #0a0a0a;
+  padding: 160px 0 100px 0; 
+  min-height: 90vh;
   display: flex;
   align-items: center;
-  padding: 120px 0 80px;
   overflow: hidden;
 }
 
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201, 169, 98, 0.15), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(201, 169, 98, 0.08), transparent);
-  pointer-events: none;
-}
-
 .hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  max-width: 1400px !important; 
+  margin: 0 auto !important;
+  padding: 0 5% !important;
 }
 
 .hero-title {
-  font-family: var(--font-serif);
+  /* THIS IS THE BOLD FIX */
+  font-family: var(--font-sans) !important;
   font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 600;
+  font-weight: 800 !important; /* Extra Bold */
   line-height: 1.1;
+  letter-spacing: -0.04em !important; /* Tight branding look */
   margin-bottom: 24px;
 }
 
-.hero-subtitle {
-  font-size: 1.125rem;
-  color: var(--color-text-secondary);
-  line-height: 1.7;
-  margin-bottom: 32px;
-  max-width: 520px;
+.hero-text {
+  flex: 0 0 40% !important;
+  text-align: left !important;
+  z-index: 2;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-/* Hero Visual Card */
 .hero-visual {
+  flex: 0 0 600px !important; 
   display: flex;
   justify-content: flex-end;
 }
 
 .hero-card {
-  position: relative;
-  width: 100%;
-  max-width: 420px;
-  border-radius: var(--radius-xl);
+  width: 600px !important; 
+  background: #161616;
+  border-radius: 30px;
   overflow: hidden;
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
 }
 
 .hero-card-image {
-  aspect-ratio: 3/2;
+  width: 100% !important;
+  height: 720px !important; /* Your Vision Height */
   overflow: hidden;
 }
 
 .hero-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform var(--transition-slow);
-}
-
-.hero-card:hover .hero-card-image img {
-  transform: scale(1.05);
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; 
+  object-position: center;
 }
 
 .hero-card-content {
-  padding: 24px;
+  padding: 30px;
+  background: #161616;
 }
 
-.hero-card-tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-accent);
-  margin-bottom: 8px;
-}
+/* ============================================
+   MOBILE FIX (Force Stacking)
+   ============================================ */
+@media (max-width: 1023px) {
+  .hero-content {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding-top: 60px !important;
+  }
 
-.hero-card-content h3 {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
+  .hero-text {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    margin-bottom: 40px;
+  }
 
-.hero-card-content p {
-  font-size: 0.9375rem;
-  color: var(--color-text-secondary);
-}
+  .hero-visual {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
 
+  .hero-card {
+    /* Shrink the card so it fits on phone screens */
+    width: 100% !important;
+    max-width: 450px !important; 
+  }
+
+  .hero-card-image {
+    height: 450px !important; /* Slightly shorter for mobile to avoid scrolling forever */
+  }
+}
 /* ============================================
    TRUST STRIP
    ============================================ */
@@ -1081,6 +1077,7 @@ input, textarea, select {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 /* Mobile */
@@ -1204,18 +1201,103 @@ input, textarea, select {
   .section-title {
     font-size: 1.75rem;
   }
-  /* FORCE NAVIGATION TO STAY AT TOP */
-nav, .navbar {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    z-index: 9999 !important;
-    background-color: #0a0a0a !important;
+/* ============================================
+   FORCED REDESIGN - THE FINAL ATTEMPT
+   ============================================ */
+
+/* This targets the title regardless of what variables are set */
+.hero-title, 
+.hero h1, 
+.hero-text h1 {
+    font-family: sans-serif !important; /* Forces the browser's cleanest font */
+    font-size: 60px !important;         /* Fixed size to test */
+    font-weight: 900 !important;        /* Thickest possible weight */
+    line-height: 1.1 !important;
+    letter-spacing: -2px !important;    /* Tight modern look */
+    color: #ffffff !important;
+    text-align: left !important;
+    margin: 0 0 24px 0 !important;
+    display: block !important;
+    text-transform: none !important;
 }
 
-/* PUSH CONTENT DOWN SO NAV DOESN'T COVER HERO */
-body {
-    padding-top: 80px !important;
+/* Forces the span inside to be Gold */
+.hero-title span, 
+.hero-title .accent {
+    color: #c9a962 !important;
+    font-family: sans-serif !important;
+    font-weight: 900 !important;
+}
+
+/* Force the subtitle to match */
+.hero-subtitle, 
+.hero p {
+    font-family: sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    color: #a1a1aa !important;
+    max-width: 500px !important;
+}
+
+/* ============================================
+   STRICT MOBILE-ONLY TEXT FIX
+   (This will NOT affect your desktop)
+   ============================================ */
+@media (max-width: 768px) {
+    /* Shrinks the "Family Run Team" title */
+    .hero-main-title {
+        font-size: 1.8rem !important; 
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* Shrinks the boutique stays description */
+    .hero-description {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        max-width: 100% !important;
+    }
+
+    /* Adjusts the featured property text sizes */
+    .property-info-wrap h3 {
+        font-size: 1.4rem !important;
+    }
+
+    .property-info-wrap p {
+        font-size: 0.85rem !important;
+    }
+
+    /* Ensures the image doesn't get too tall on phones */
+    .property-image-wrap {
+        height: 260px !important;
+    }
+}
+/* ============================================
+   FINAL SURGICAL TEXT SHRINK (Mobile)
+   ============================================ */
+@media (max-width: 480px) {
+    /* This targets the specific title in your screenshot */
+    .hero-main-title, 
+    h1.hero-main-title {
+        font-size: 1.8rem !important; /* Shrinks from that giant 60px */
+        line-height: 1.2 !important;
+        letter-spacing: -0.02em !important;
+        text-align: left !important;
+        margin-bottom: 15px !important;
+        display: block !important;
+    }
+
+    /* This shrinks the boutique description below it */
+    .hero-description {
+        font-size: 0.95rem !important; /* Smaller, cleaner text */
+        line-height: 1.5 !important;
+        text-align: left !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+
+    /* Pulls the text away from the left edge slightly */
+    .hero-text-box {
+        padding: 0 20px !important;
+    }
 }
 }
